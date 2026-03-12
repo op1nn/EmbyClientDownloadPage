@@ -3,186 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Emby 第三方客户端下载</title>
+    <title>Emby 终端下载中心</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #00a4dc;
-            --bg-color: #141414;
-            --card-bg: #1f1f1f;
-            --text-color: #ffffff;
-            --text-secondary: #b0b0b0;
-        }
-
-        body {
-            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-color);
-            margin: 0;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        header {
-            text-align: center;
-            margin-bottom: 40px;
-        }
-
-        h1 { color: var(--primary-color); margin-bottom: 10px; }
-        p { color: var(--text-secondary); }
-
-        .container {
-            width: 100%;
-            max-width: 900px;
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 20px;
-        }
-
-        .card {
-            background: var(--card-bg);
-            border-radius: 12px;
-            padding: 20px;
-            transition: transform 0.2s, box-shadow 0.2s;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid #333;
-        }
-
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
-        }
-
-        .card-header {
-            display: flex;
-            align-items: center;
-            margin-bottom: 15px;
-        }
-
-        .icon {
-            width: 50px;
-            height: 50px;
-            border-radius: 10px;
-            background: #333;
-            margin-right: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-weight: bold;
-            font-size: 20px;
-        }
-
-        .platform-tag {
-            font-size: 12px;
-            background: #333;
-            padding: 2px 8px;
-            border-radius: 4px;
-            color: var(--text-secondary);
-            margin-top: 5px;
-            display: inline-block;
-        }
-
-        .description {
-            font-size: 14px;
-            color: var(--text-secondary);
-            line-height: 1.5;
-            margin-bottom: 20px;
-        }
-
-        .download-btn {
-            display: block;
-            text-align: center;
-            background-color: var(--primary-color);
-            color: white;
-            text-decoration: none;
-            padding: 10px;
-            border-radius: 6px;
-            font-weight: 600;
-            transition: opacity 0.2s;
-        }
-
-        .download-btn:hover {
-            opacity: 0.9;
-        }
-
-        footer {
-            margin-top: 50px;
-            color: #555;
-            font-size: 13px;
-        }
+        body { background-color: #0f172a; color: white; font-family: 'Inter', system-ui, sans-serif; }
+        .glass-card { background: rgba(30, 41, 59, 0.7); backdrop-filter: blur(12px); border: 1px solid rgba(255, 255, 255, 0.1); }
+        .highlight-border { border: 2px solid #38bdf8 !important; box-shadow: 0 0 20px rgba(56, 189, 248, 0.3); }
+        .gradient-text { background: linear-gradient(90deg, #38bdf8, #818cf8); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
     </style>
 </head>
-<body>
+<body class="antialiased">
 
-<header>
-    <h1>Emby 客户端下载</h1>
-    <p>选择适合您设备的第三方增强客户端</p>
-</header>
-
-<div class="container">
-    <div class="card">
-        <div>
-            <div class="card-header">
-                <div class="icon" style="background: #fb7299;">Y</div>
-                <div>
-                    <strong>Yamby</strong><br>
-                    <span class="platform-tag">Android / Android TV</span>
-                </div>
-            </div>
-            <p class="description">目前最推荐的 Android 第三方客户端。界面现代化，支持原画播放和弹幕功能（需服务器插件）。</p>
+    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
+        <div class="flex items-center space-x-2">
+            <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center"><i class="fas fa-play text-white"></i></div>
+            <span class="text-xl font-bold tracking-tight">Emby <span class="text-sky-400">Hub</span></span>
         </div>
-        <a href="https://github.com/YambyApp/Yamby/releases" class="download-btn">前往下载</a>
-    </div>
+    </nav>
 
-    <div class="card">
-        <div>
-            <div class="card-header">
-                <div class="icon" style="background: #5856d6;">V</div>
-                <div>
-                    <strong>VidHub</strong><br>
-                    <span class="platform-tag">iOS / macOS / tvOS</span>
-                </div>
-            </div>
-            <p class="description">苹果生态下的全能播放器。完美替代官方客户端，支持 Emby/Plex/Jellyfin，界面精美。</p>
+    <section class="text-center pt-12 pb-8 px-4">
+        <div id="os-badge" class="inline-block mb-4 px-4 py-1 rounded-full bg-sky-500/20 text-sky-400 text-sm font-bold border border-sky-500/30">
+            正在识别您的设备系统...
         </div>
-        <a href="https://apps.apple.com/app/vidhub-video-player/id6446215044" class="download-btn">App Store 下载</a>
-    </div>
+        <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tighter">
+            获取最适合您的 <span class="gradient-text">Emby 客户端</span>
+        </h1>
+    </section>
 
-    <div class="card">
-        <div>
-            <div class="card-header">
-                <div class="icon" style="background: #e74c3c;">I</div>
-                <div>
-                    <strong>Infuse</strong><br>
-                    <span class="platform-tag">iOS / macOS / tvOS</span>
+    <main class="max-w-7xl mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <div id="card-android" class="glass-card p-8 rounded-3xl flex flex-col group transition-all">
+                <div class="mb-6 flex justify-between items-start">
+                    <div class="w-16 h-16 bg-pink-500/20 text-pink-500 rounded-2xl flex items-center justify-center text-3xl"><i class="fab fa-android"></i></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-pink-500 bg-pink-500/10 px-3 py-1 rounded-full">Android</span>
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Yamby</h3>
+                <p class="text-slate-400 mb-8 flex-grow">Android 手机与电视盒子的最佳选择。</p>
+                <a href="#" class="w-full py-4 bg-slate-700 group-hover:bg-sky-500 rounded-2xl text-center font-bold transition-colors">立即下载 APK</a>
             </div>
-            <p class="description">行业标杆。超强的解码能力，自动海报墙匹配，是苹果用户追求极致画质的首选。</p>
-        </div>
-        <a href="https://firecore.com/infuse" class="download-btn">官方网站</a>
-    </div>
 
-    <div class="card">
-        <div>
-            <div class="card-header">
-                <div class="icon" style="background: #2ecc71;">F</div>
-                <div>
-                    <strong>Fileball</strong><br>
-                    <span class="platform-tag">iOS / Android</span>
+            <div id="card-windows" class="glass-card p-8 rounded-3xl flex flex-col group transition-all">
+                <div class="mb-6 flex justify-between items-start">
+                    <div class="w-16 h-16 bg-blue-500/20 text-blue-500 rounded-2xl flex items-center justify-center text-3xl"><i class="fab fa-windows"></i></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-blue-500 bg-blue-500/10 px-3 py-1 rounded-full">Windows</span>
                 </div>
+                <h3 class="text-2xl font-bold mb-2">Emby Desktop</h3>
+                <p class="text-slate-400 mb-8 flex-grow">PC 端原生体验，支持硬解，播放 4K 不卡顿。</p>
+                <a href="#" class="w-full py-4 bg-slate-700 group-hover:bg-sky-500 rounded-2xl text-center font-bold transition-colors">下载 Windows 版</a>
             </div>
-            <p class="description">轻量级文件管理与视频播放器，支持多种网盘及 Emby 协议。简洁、快速。</p>
+
+            <div id="card-ios" class="glass-card p-8 rounded-3xl flex flex-col group transition-all">
+                <div class="mb-6 flex justify-between items-start">
+                    <div class="w-16 h-16 bg-white/20 text-white rounded-2xl flex items-center justify-center text-3xl"><i class="fab fa-apple"></i></div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-white bg-white/10 px-3 py-1 rounded-full">iOS / macOS</span>
+                </div>
+                <h3 class="text-2xl font-bold mb-2">VidHub</h3>
+                <p class="text-slate-400 mb-8 flex-grow">苹果生态首选，海报墙精美，操作丝滑。</p>
+                <a href="#" class="w-full py-4 bg-slate-700 group-hover:bg-sky-500 rounded-2xl text-center font-bold transition-colors">前往 App Store</a>
+            </div>
+
         </div>
-        <a href="https://fileball.app/" class="download-btn">官方网站</a>
-    </div>
-</div>
+    </main>
 
-<footer>
-    本页面仅提供公开资源的链接导航，软件版权归原作者所有。
-</footer>
+    <script>
+        function detectOS() {
+            const userAgent = window.navigator.userAgent;
+            const platform = window.navigator.platform;
+            const osBadge = document.getElementById('os-badge');
+            
+            let detected = "未知设备";
+            let targetCard = null;
 
+            if (/Android/.test(userAgent)) {
+                detected = "检测到您正在使用 Android 设备";
+                targetCard = document.getElementById('card-android');
+            } else if (/iPhone|iPad|iPod/.test(userAgent) || (navigator.platform === 'MacIntel' && navigator.maxTouchPoints > 1)) {
+                detected = "检测到您正在使用 iOS 设备";
+                targetCard = document.getElementById('card-ios');
+            } else if (/Win/.test(platform)) {
+                detected = "检测到您正在使用 Windows 电脑";
+                targetCard = document.getElementById('card-windows');
+            } else if (/Mac/.test(platform)) {
+                detected = "检测到您正在使用 macOS 设备";
+                targetCard = document.getElementById('card-ios');
+            }
+
+            // 更新顶部文案
+            osBadge.innerHTML = `<i class="fas fa-magic mr-2"></i>${detected} - 已为您智能推荐`;
+            
+            // 高亮对应卡片
+            if (targetCard) {
+                targetCard.classList.add('highlight-border');
+                // 平滑滚动到推荐位（如果在手机上）
+                if(window.innerWidth < 768) {
+                    targetCard.scrollIntoView({ behavior: 'smooth', block: 'center' });
+                }
+            }
+        }
+
+        // 页面加载完成后执行识别
+        window.onload = detectOS;
+    </script>
 </body>
 </html>
