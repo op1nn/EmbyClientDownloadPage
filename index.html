@@ -17,18 +17,13 @@
 </head>
 <body class="antialiased">
 
-    <nav class="flex items-center justify-between px-8 py-6 max-w-7xl mx-auto">
-        <div class="flex items-center space-x-2">
-            <div class="w-10 h-10 bg-sky-500 rounded-lg flex items-center justify-center"><i class="fas fa-play text-white"></i></div>
-            <span class="text-xl font-bold tracking-tight">Emby <span class="text-sky-400">Hub</span></span>
-        </div>
-    </nav>
+    
 
     <section class="text-center pt-8 pb-4 px-4">
         <div id="os-badge" class="inline-block mb-4 px-4 py-1 rounded-full bg-sky-500/20 text-sky-400 text-sm font-bold border border-sky-500/30">
             正在为您匹配最佳终端...
         </div>
-        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tighter">全平台客户端下载</h1>
+        <h1 class="text-4xl md:text-5xl font-extrabold mb-4 tracking-tighter">Emby 第三方客户端下载</h1>
     </section>
 
     <main id="main-content" class="max-w-7xl mx-auto px-4 py-8 flex flex-col gap-12">
@@ -38,7 +33,9 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all hover:scale-[1.02]">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-blue-500/20 text-blue-500 rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-windows"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="hills-lite.png" alt="Hills Lite 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20">免费</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Hills Lite</h3>
@@ -48,7 +45,9 @@
 
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all hover:scale-[1.02]">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-blue-500/20 text-blue-500 rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-windows"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="xiaohuan.png" alt="小幻影视 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
                     </div>
                     <h3 class="text-xl font-bold mb-2">小幻影视</h3>
@@ -61,11 +60,11 @@
         <div id="section-android" class="os-section">
             <div class="category-title">Android / TV 平台</div>
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                
-
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-pink-500/20 text-pink-500 rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-android"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="yamby.png" alt="Yamby 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <div class="flex flex-col items-end gap-1">
                          <span class="text-[10px] font-bold text-emerald-400 bg-emerald-400/10 px-3 py-1 rounded-full border border-emerald-400/20">免费</span>
                             <span class="text-[10px] text-slate-500">密码: bae8</span>
@@ -78,15 +77,31 @@
 
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-pink-500/20 text-pink-500 rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-android"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="hills-android.png" alt="Hills Android 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <div class="flex flex-col items-end gap-1">
-                        <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
+                            <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
                             <span class="text-[10px] text-slate-500">密码: 1wom</span>
                         </div>
                     </div>
                     <h3 class="text-xl font-bold mb-2">Hills</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow">Hills 的 Android/TV 版本，功能同步桌面端，支持极致解码体验。</p>
                     <a href="https://wwbis.lanzouu.com/iEVju3kg5nkd" target="_blank" class="w-full py-3 bg-slate-700 group-hover:bg-pink-500 rounded-xl text-center text-sm font-bold transition-colors">蓝奏云下载</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all opacity-60">
+                    <div class="mb-4 flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="vidhub-android.png" alt="VidHub Android 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
+                        <div class="flex flex-col items-end gap-1">
+                            <span class="text-[10px] font-bold text-slate-400 bg-slate-400/10 px-3 py-1 rounded-full border border-slate-400/20">开发中</span>
+                        </div>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">VidHub（Android）</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">VidHub Android 客户端将提供与 iOS 版一致的流畅播放体验，敬请期待。</p>
+                    <button disabled class="w-full py-3 bg-slate-800 rounded-xl text-center text-sm font-bold text-slate-500 cursor-not-allowed">敬请期待</button>
                 </div>
             </div>
         </div>
@@ -97,9 +112,10 @@
 
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-white/20 text-white rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-apple"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="senplayer.png" alt="SenPlayer 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
-                        
                     </div>
                     <h3 class="text-xl font-bold mb-2">SenPlayer</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow">支持 Emby、Jellyfin 的轻量级播放器。操作直观，支持多种视频格式解码。</p>
@@ -108,13 +124,38 @@
 
                 <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
                     <div class="mb-4 flex justify-between items-start">
-                        <div class="w-12 h-12 bg-white/20 text-white rounded-xl flex items-center justify-center text-2xl"><i class="fab fa-apple"></i></div>
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="forward.png" alt="Forward 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
                         <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
-                        
                     </div>
                     <h3 class="text-xl font-bold mb-2">Forward</h3>
                     <p class="text-slate-400 text-sm mb-6 flex-grow">支持 Emby、Jellyfin 的轻量级播放器。操作直观，支持多种视频格式解码。</p>
                     <a href="https://apps.apple.com/cn/app/forward-新视界/id6503940939" target="_blank" class="w-full py-3 bg-slate-700 group-hover:bg-sky-500 rounded-xl text-center text-sm font-bold transition-colors">App Store 下载</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
+                    <div class="mb-4 flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="vidhub-ios.png" alt="VidHub iOS 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
+                        <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">VidHub</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">支持 Emby、Jellyfin、Plex 等媒体库，提供高清播放、字幕和网盘直连等功能。</p>
+                    <a href="https://apps.apple.com/cn/app/vidhub-%E9%AB%98%E6%B8%85%E5%BD%B1%E7%89%87%E8%A7%86%E9%A2%91%E6%92%AD%E6%94%BE%E5%99%A8-%E5%BF%AB%E9%80%9F%E6%92%AD%E6%94%BE%E4%BA%91%E7%9B%98%E7%BD%91%E7%9B%98/id1659622164" target="_blank" class="w-full py-3 bg-slate-700 group-hover:bg-sky-500 rounded-xl text-center text-sm font-bold transition-colors">App Store 下载</a>
+                </div>
+
+                <div class="glass-card p-6 rounded-3xl flex flex-col group transition-all">
+                    <div class="mb-4 flex justify-between items-start">
+                        <div class="w-12 h-12 rounded-xl flex items-center justify-center overflow-hidden">
+                            <img src="infuse.png" alt="Infuse 图标" class="w-10 h-10 rounded-xl object-cover">
+                        </div>
+                        <span class="text-[10px] font-bold text-amber-400 bg-amber-400/10 px-3 py-1 rounded-full border border-amber-400/20">收费</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Infuse</h3>
+                    <p class="text-slate-400 text-sm mb-6 flex-grow">知名视频播放器，支持 Emby、Jellyfin、Plex 等媒体库，界面精致，4K HDR 播放表现优秀。</p>
+                    <a href="https://apps.apple.com/us/app/infuse/id1136220934?l=zh-Hans-CN" target="_blank" class="w-full py-3 bg-slate-700 group-hover:bg-sky-500 rounded-xl text-center text-sm font-bold transition-colors">App Store 下载</a>
                 </div>
             </div>
         </div>
