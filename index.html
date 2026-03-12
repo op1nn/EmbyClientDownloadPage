@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emby 第三方客户端下载</title>
+    <style>
+        :root {
+            --primary-color: #00a4dc;
+            --bg-color: #141414;
+            --card-bg: #1f1f1f;
+            --text-color: #ffffff;
+            --text-secondary: #b0b0b0;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 { color: var(--primary-color); margin-bottom: 10px; }
+        p { color: var(--text-secondary); }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 20px;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            border: 1px solid #333;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.5);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+            background: #333;
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 20px;
+        }
+
+        .platform-tag {
+            font-size: 12px;
+            background: #333;
+            padding: 2px 8px;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            margin-top: 5px;
+            display: inline-block;
+        }
+
+        .description {
+            font-size: 14px;
+            color: var(--text-secondary);
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: block;
+            text-align: center;
+            background-color: var(--primary-color);
+            color: white;
+            text-decoration: none;
+            padding: 10px;
+            border-radius: 6px;
+            font-weight: 600;
+            transition: opacity 0.2s;
+        }
+
+        .download-btn:hover {
+            opacity: 0.9;
+        }
+
+        footer {
+            margin-top: 50px;
+            color: #555;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1>Emby 客户端下载</h1>
+    <p>选择适合您设备的第三方增强客户端</p>
+</header>
+
+<div class="container">
+    <div class="card">
+        <div>
+            <div class="card-header">
+                <div class="icon" style="background: #fb7299;">Y</div>
+                <div>
+                    <strong>Yamby</strong><br>
+                    <span class="platform-tag">Android / Android TV</span>
+                </div>
+            </div>
+            <p class="description">目前最推荐的 Android 第三方客户端。界面现代化，支持原画播放和弹幕功能（需服务器插件）。</p>
+        </div>
+        <a href="https://github.com/YambyApp/Yamby/releases" class="download-btn">前往下载</a>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="card-header">
+                <div class="icon" style="background: #5856d6;">V</div>
+                <div>
+                    <strong>VidHub</strong><br>
+                    <span class="platform-tag">iOS / macOS / tvOS</span>
+                </div>
+            </div>
+            <p class="description">苹果生态下的全能播放器。完美替代官方客户端，支持 Emby/Plex/Jellyfin，界面精美。</p>
+        </div>
+        <a href="https://apps.apple.com/app/vidhub-video-player/id6446215044" class="download-btn">App Store 下载</a>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="card-header">
+                <div class="icon" style="background: #e74c3c;">I</div>
+                <div>
+                    <strong>Infuse</strong><br>
+                    <span class="platform-tag">iOS / macOS / tvOS</span>
+                </div>
+            </div>
+            <p class="description">行业标杆。超强的解码能力，自动海报墙匹配，是苹果用户追求极致画质的首选。</p>
+        </div>
+        <a href="https://firecore.com/infuse" class="download-btn">官方网站</a>
+    </div>
+
+    <div class="card">
+        <div>
+            <div class="card-header">
+                <div class="icon" style="background: #2ecc71;">F</div>
+                <div>
+                    <strong>Fileball</strong><br>
+                    <span class="platform-tag">iOS / Android</span>
+                </div>
+            </div>
+            <p class="description">轻量级文件管理与视频播放器，支持多种网盘及 Emby 协议。简洁、快速。</p>
+        </div>
+        <a href="https://fileball.app/" class="download-btn">官方网站</a>
+    </div>
+</div>
+
+<footer>
+    本页面仅提供公开资源的链接导航，软件版权归原作者所有。
+</footer>
+
+</body>
+</html>
